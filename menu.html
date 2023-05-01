@@ -1,0 +1,55 @@
+<style>
+    .menu {
+position: relative;
+}
+.menu-button {
+background-color: rgb(182, 74, 92);
+color: #fff;
+padding: 10px;
+/* cursor: pointer; */
+}
+.menu-items {
+/* position: absolute; */
+top: 100%;
+left: 0;
+width: 10%;
+background-color: rgb(76, 207, 190);
+padding: 0;
+margin: 0;
+list-style-type: none;
+display: none;
+}
+.menu-items.show {
+display: block;
+}
+.menu-items li a {
+display: block;
+padding: 10px;
+color: #fff;
+}
+menu{
+float: left;
+}
+.menu1{
+float: right;
+}
+
+  </style>
+  <div class="menu">
+    <div class="menu-button">Menu</div>
+    <ul class="menu-items">
+      <li><a href="#">home</a></li>
+      <li><a href="#">about</a></li>
+      <li><a href="#">contact</a></li>
+      <li><a href="#">context</a></li>
+    </ul>
+  </div>
+  <script>
+    const menuButton = document.querySelector(".menu-button");
+    const menuItems = document.querySelector(".menu-items");
+  
+    menuButton.addEventListener("click", () => {
+      menuItems.classList.toggle("show");
+    });
+  </script>
+

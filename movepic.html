@@ -1,0 +1,38 @@
+<style>
+    div {
+position: relative;
+}
+img {
+width: 400px;
+/* height: 350px; */
+position: absolute;
+left: 0;
+
+transition: width 0.5s ease-in-out;
+margin-top: 30px;
+}
+
+  </style>
+  <div>
+    <img id="myImage" src="IMG_447815.jpg">
+    <button onclick="moveImage()">Move Image</button>
+  </div>
+  <script>
+    const image = document.getElementById("myImage");
+    let position = 0;
+  
+    function moveImage() {
+      position += 10;
+      image.style.left = position + "px";
+    }
+  
+    image.addEventListener("mouseover", () => {
+      image.style.width = "200px";
+    });
+  
+    image.addEventListener("mouseout", () => {
+      image.style.width = "100px";
+    });
+  </script>            
+</body>
+</html>
